@@ -28,6 +28,7 @@
 						</p>
 					</a>
 				</li>
+				<?php if ($this->session->userdata('role') == 'admin') { ?>
 				<li class="nav-item">
 					<a href="#" class="nav-link">
 						<i class="nav-icon fas fa-address-card"></i>
@@ -51,6 +52,31 @@
 						</li>
 					</ul>
 				</li>
+				<?php }else { ?>
+					<li class="nav-item">
+						<a href="#" class="nav-link">
+							<i class="nav-icon fas fa-address-card"></i>
+							<p>
+								Master Petugas
+								<i class="right fas fa-angle-left"></i>
+							</p>
+						</a>
+						<ul class="nav nav-treeview">
+							<li class="nav-item">
+								<a href="<?= base_url('admin/file') ?>" class="nav-link active">
+									<i class="far fa-file nav-icon"></i>
+									<p>Data Files</p>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="<?= base_url('admin/petugas') ?>" class="nav-link">
+									<i class="far fa-user nav-icon"></i>
+									<p>Profile</p>
+								</a>
+							</li>
+						</ul>
+					</li>
+				<?php } ?>
 			</ul>
 		</nav>
 		<!-- /.sidebar-menu -->
