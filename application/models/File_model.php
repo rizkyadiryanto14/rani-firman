@@ -1,7 +1,17 @@
 <?php
 
+/**
+ * @property $db
+ */
+
 class File_model extends CI_Model
 {
+
+	public function insert($data)
+	{
+		return $this->db->insert('file', $data);
+	}
+
 	function make_query()
 	{
 		$this->db->select('file.*')

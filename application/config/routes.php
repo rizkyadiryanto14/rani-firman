@@ -66,6 +66,8 @@ $route['dashboard']	= 'Dashboard';
 //admin
 $route['admin/file']		='Admin/File';
 $route['admin/get_data_file']		= 'Admin/File/get_data_file';
+$route['admin/insert_file']			= 'Admin/File/insert';
 
 $route['admin/petugas']		= 'Admin/Petugas';
 $route['admin/get_data_petugas']	= 'Admin/Petugas/get_data_petugas';
+$route['admin/insert_petugas']		= 'Admin/Petugas/insert';

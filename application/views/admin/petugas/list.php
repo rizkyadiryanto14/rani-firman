@@ -65,28 +65,30 @@
 					Form Tambah Petugas
 				</div>
 			</div>
-			<div class="modal-body">
-				<div class="form-group">
-					<label for="nama_lengkap">Nama Lengkap</label>
-					<input type="hidden" name="id_users" id="id_users" value="<?= $this->session->userdata('id_users') ?>">
-					<input type="text" name="nama_lengkap" id="nama_lengkap" class="form-control">
-				</div>
-				<div class="form-group">
-					<label for="alamat">Alamat</label>
-					<input type="text" name="alamat" id="alamat" class="form-control">
-				</div>
-				<div class="form-group">
-					<label for="jenis_kelamin">Jenis Kelamin</label>
-					<select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
-						<option selected disabled>Pilih Jenis Kelamin</option>
-						<option value="Laki-Laki">Laki-Laki</option>
-						<option value="Perempuan">Perempuan</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="tanggal_lahir">Tanggal Lahir</label>
-					<input type="date" name="tanggal_lahir" id="tanggal_lahir" class="form-control">
-				</div>
+			<form action="<?= base_url('admin/petugas') ?>" method="post">
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="nama_lengkap">Nama Lengkap</label>
+						<input type="hidden" name="id_users" id="id_users" value="<?= $this->session->userdata('id_users') ?>">
+						<input type="text" name="nama_lengkap" id="nama_lengkap" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="alamat">Alamat</label>
+						<input type="text" name="alamat" id="alamat" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="jenis_kelamin">Jenis Kelamin</label>
+						<select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
+							<option selected disabled>Pilih Jenis Kelamin</option>
+							<option value="Laki-Laki">Laki-Laki</option>
+							<option value="Perempuan">Perempuan</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="tanggal_lahir">Tanggal Lahir</label>
+						<input type="date" name="tanggal_lahir" id="tanggal_lahir" class="form-control">
+					</div>
+			</form>
 			</div>
 			<div class="modal-footer">
 				<button class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -2,6 +2,8 @@
 
 /**
  * @property $Petugas_model
+ * @property $input
+ * @property $session
  */
 
 class Petugas extends CI_Controller
@@ -15,6 +17,32 @@ class Petugas extends CI_Controller
 	public function index()
 	{
 		$this->load->view('admin/petugas/list');
+	}
+
+	public function insert()
+	{
+		$id_users = $this->input->post('id_users');
+		$nama_lengkap = $this->input->post('nama_lengkap');
+		$alamat = $this->input->post('alamat');
+		$jenis_kelamin = $this->input->post('jenis_kelamin');
+		$tanggal_lahir = $this->input->post('tanggal_lahir');
+
+		$data = [
+			'id_users' => $id_users,
+			'nama_lengkap' => $nama_lengkap,
+			'alamat' => $alamat,
+			'jenis_kelamin' => $jenis_kelamin,
+			'tanggal_lahir' => $tanggal_lahir
+		];
+
+		$insert = $this->Petugas_model->insert($data);
+
+		if ($insert) {
+			$this->session->set_flashdata('success', 'Data berhasil ditambahkan');
+		}else {
+			$this->session->set_flashdata('error', 'Data gagal ditambahkan');
+		}
+		redirect('admin/petugas');
 	}
 
 	public function get_data_petugas(): void

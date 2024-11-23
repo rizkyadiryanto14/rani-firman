@@ -1,7 +1,17 @@
 <?php
 
+/**
+ *
+ * @property $db
+ */
+
 class Petugas_model extends CI_Model
 {
+	public function insert($data)
+	{
+		return $this->db->insert('petugas', $data);
+	}
+
 	function make_query()
 	{
 		$this->db->select('petugas.*')
