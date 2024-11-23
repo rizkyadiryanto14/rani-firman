@@ -1,71 +1,111 @@
-###################
-What is CodeIgniter
-###################
+##########################
+Sistem Informasi Bawaslu
+##########################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+Sistem Informasi Bawaslu adalah sebuah aplikasi berbasis web yang dirancang untuk mengelola dan mengunggah file-file penting di lingkungan Bawaslu. Aplikasi ini memiliki fitur pengelolaan file yang dapat diatur oleh admin untuk diakses publik atau hanya oleh pengguna terdaftar.
 
-*******************
-Release Information
-*******************
+Fitur Utama
+-----------
+- **Unggah File Penting**: Admin dapat mengunggah file penting dan menentukan aksesibilitasnya.
+- **Akses Publik atau Login**: Jika file diberi tanda centang oleh admin, file dapat diunduh oleh publik. Jika tidak, pengguna diarahkan ke halaman login.
+- **Manajemen Pengguna**: Admin dapat mengelola data petugas.
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+Teknologi yang Digunakan
+------------------------
+- **Framework**: CodeIgniter 3
+- **Bahasa Pemrograman**: PHP 7.4
+- **Web Server**: XAMPP versi 8.0
+- **Dependency Manager**: Composer
 
-**************************
-Changelog and New Features
-**************************
+Unduh perangkat yang dibutuhkan:
+- `XAMPP <https://www.apachefriends.org/download.html>`_
+- `Composer <https://getcomposer.org/download/>`_
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
-
-*******************
 Server Requirements
-*******************
+-------------------
+- PHP 7.4 atau yang lebih baru
+- XAMPP versi 8.0
 
-PHP version 5.6 or newer is recommended.
+Panduan Penggunaan
+------------------
+1. **Admin**:
+- **Kelola Files**: Admin dapat menambahkan file baru dan menentukan apakah file dapat diakses publik atau memerlukan login.
+- **Kelola Petugas**: Admin dapat menambah, mengedit, dan menghapus data petugas.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+2. **Petugas**:
+- **Kelola File (Read Only)**: Petugas hanya memiliki akses baca terhadap file yang ada.
 
-************
+3. **Publik**:
+- File yang diunggah dan diatur untuk publik dapat diakses dan diunduh melalui halaman informasi publik.
+- Jika file tidak diizinkan untuk publik, pengguna akan diarahkan ke halaman login.
+
+
 Installation
-************
+------------
+Ikuti langkah-langkah berikut untuk menginstal dan menjalankan aplikasi:
 
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
+1. **Clone Repository**:
+   Clone proyek ini ke direktori `c:/xampp/htdocs`:
 
-*******
-License
-*******
+2. **Nyalakan XAMPP**:
+		Buka aplikasi XAMPP dan jalankan layanan **Apache** dan **MySQL**.
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+3. **Akses phpMyAdmin**:
+		Buka phpMyAdmin melalui browser di `http://localhost/phpmyadmin`.
 
-*********
-Resources
-*********
+4. **Import Database**:
+		- Buat database baru dengan nama sesuai konfigurasi Anda.
+		- Import file database `.sql` yang disertakan dalam proyek ini.
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
+5. **Konfigurasi Database**:
+   Edit file konfigurasi database pada `application/config/database.php`:
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+   .. code-block:: php
 
-***************
-Acknowledgement
-***************
+       $db['default'] = array(
+           'dsn'      => '',
+           'hostname' => 'localhost',
+           'username' => 'root',
+           'password' => '',
+           'database' => 'bawaslu_sumbawa',
+           'dbdriver' => 'mysqli',
+           'dbprefix' => '',
+           'pconnect' => FALSE,
+           'db_debug' => (ENVIRONMENT !== 'production'),
+           'cache_on' => FALSE,
+           'cachedir' => '',
+           'char_set' => 'utf8',
+           'dbcollat' => 'utf8_general_ci',
+           'swap_pre' => '',
+           'encrypt'  => FALSE,
+           'compress' => FALSE,
+           'stricton' => FALSE,
+           'failover' => array(),
+           'save_queries' => TRUE
+       );
 
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+6. **Jalankan Composer Install**:
+   Pastikan Composer telah diinstal di sistem Anda. Jika belum, unduh dan instal melalui `Composer <https://getcomposer.org/download/>`_. Setelah itu, jalankan perintah berikut di direktori proyek:
+
+
+
+Project Folder Structure
+------------------------
+Berikut adalah struktur direktori proyek:
+
+.. code-block:: text
+
+   Sistem Informasi Bawaslu/
+   ├── admin
+   │   ├── Kelola Files
+   │   ├── Kelola Petugas
+   │
+   ├── petugas
+   │   ├── Kelola File (Read Only)
+   │
+   ├── file
+   │   └── [File yang diunggah akan disimpan di sini]
+
+
+
+
