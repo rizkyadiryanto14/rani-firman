@@ -43,8 +43,8 @@
 
 		<a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
 			<!-- Uncomment the line below if you also wish to use an image logo -->
-			<!-- <img src="<?= base_url() ?>assets/landing/img/logo.png" alt=""> -->
-			<h1 class="sitename">Bawaslu Sumbawa</h1>
+			 <img src="<?= base_url() ?>assets/images/logo.png" alt="">
+<!--			<h1 class="sitename">Bawaslu Sumbawa</h1>-->
 		</a>
 
 		<nav id="navmenu" class="navmenu">
@@ -83,7 +83,7 @@
 			<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 		</nav>
 
-		<a class="btn-getstarted" href="index.html#about">Get Started</a>
+		<a class="btn-getstarted" href="<?= base_url('datacenter') ?>">Get Started</a>
 
 	</div>
 </header>
@@ -115,7 +115,7 @@
 						</p>
 
 						<div class="hero-buttons">
-							<a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
+							<a href="<?= base_url('datacenter') ?>" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
 							<a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-link mt-2 mt-sm-0 glightbox">
 								<i class="bi bi-play-circle me-1"></i>
 								Visi Misi
@@ -351,6 +351,30 @@
 
 <!-- Main JS File -->
 <script src="<?= base_url() ?>assets/landing/js/main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<?php if ($this->session->flashdata('success')) : ?>
+	<script>
+		Swal.fire({
+			title: 'Sukses!',
+			text: `<?php echo $this->session->flashdata('success'); ?>`,
+			icon: 'success',
+			confirmButtonText: 'OK'
+		});
+	</script>
+<?php endif; ?>
+
+<?php if ($this->session->flashdata('error')) : ?>
+	<script>
+		Swal.fire({
+			title: 'Gagal!',
+			text: `<?php echo $this->session->flashdata('error'); ?>`,
+			icon: 'error',
+			confirmButtonText: 'OK'
+		});
+	</script>
+<?php endif; ?>
 
 </body>
 

@@ -52,3 +52,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+//auth
+$route['datacenter']	= 'Auth';
+$route['auth/login']	= 'Auth/login';
+$route['auth/logout']	= 'Auth/logout';
+
+//dashboard
+$route['dashboard']	= 'Dashboard';
+
+
+//admin
+$route['admin/file']		='Admin/File';
+
+$route['admin/petugas']		= 'Admin/Petugas';

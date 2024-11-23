@@ -1,11 +1,4 @@
-<!-- /.content-wrapper -->
-<footer class="main-footer">
-	<strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-	All rights reserved.
-	<div class="float-right d-none d-sm-inline-block">
-		<b>Version</b> 3.2.0
-	</div>
-</footer>
+
 
 <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark">
@@ -49,5 +42,30 @@
 <script src="<?= base_url() ?>assets/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= base_url() ?>assets/dist/js/pages/dashboard.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<?php if ($this->session->flashdata('success')) : ?>
+	<script>
+		Swal.fire({
+			title: 'Success!',
+			text: `<?php echo $this->session->flashdata('success'); ?>`,
+			icon: 'success',
+			confirmButtonText: 'OK'
+		});
+	</script>
+<?php endif; ?>
+
+<?php if ($this->session->flashdata('error')) : ?>
+	<script>
+		Swal.fire({
+			title: 'Error!',
+			text: `<?php echo $this->session->flashdata('error'); ?>`,
+			icon: 'error',
+			confirmButtonText: 'OK'
+		});
+	</script>
+<?php endif; ?>
 </body>
 </html>

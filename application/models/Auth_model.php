@@ -13,6 +13,6 @@ class Auth_model extends CI_Model
 
 	public function getUserByUsername($username)
 	{
-		return $this->db->get_where('users', array('username' => $username))->row();
+		return $this->db->get_where('users', array('username' => $username))->row_array();
 	}
 }
