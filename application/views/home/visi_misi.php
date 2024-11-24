@@ -9,7 +9,7 @@
 	<meta name="keywords" content="">
 
 	<!-- Favicons -->
-	<link href="<?= base_url() ?>assets/landing/img/favicon.png" rel="icon">
+	<link href="<?= base_url() ?>assets/images/logo.png" rel="icon">
 	<link href="<?= base_url() ?>assets/landing/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 	<!-- Fonts -->
@@ -41,10 +41,8 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
 	<div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-		<a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-			<!-- Uncomment the line below if you also wish to use an image logo -->
+		<a href="<?= base_url('Home') ?>" class="logo d-flex align-items-center me-auto me-xl-0">
 			<img src="<?= base_url() ?>assets/images/logo.png" alt="">
-			<!--			<h1 class="sitename">Bawaslu Sumbawa</h1>-->
 		</a>
 
 		<nav id="navmenu" class="navmenu">

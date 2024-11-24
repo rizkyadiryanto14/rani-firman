@@ -9,7 +9,7 @@
 	<meta name="keywords" content="">
 
 	<!-- Favicons -->
-	<link href="<?= base_url() ?>assets/landing/img/favicon.png" rel="icon">
+	<link href="<?= base_url() ?>assets/images/logo.png" rel="icon">
 	<link href="<?= base_url() ?>assets/landing/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 	<!-- Fonts -->
@@ -41,7 +41,7 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
 	<div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-		<a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+		<a href="<?= base_url('Home') ?>" class="logo d-flex align-items-center me-auto me-xl-0">
 			<!-- Uncomment the line below if you also wish to use an image logo -->
 			 <img src="<?= base_url() ?>assets/images/logo.png" alt="">
 <!--			<h1 class="sitename">Bawaslu Sumbawa</h1>-->
@@ -97,9 +97,9 @@
 
 						<div class="hero-buttons">
 							<a href="<?= base_url('datacenter') ?>" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
-							<a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-link mt-2 mt-sm-0 glightbox">
+							<a href="https://youtu.be/ApDm1fMUlDU?si=_f1HF7_17w45oLFy" class="btn btn-link mt-2 mt-sm-0 glightbox">
 								<i class="bi bi-play-circle me-1"></i>
-								Visi Misi
+								Vidio
 							</a>
 						</div>
 					</div>
@@ -132,7 +132,6 @@
 						</div>
 						<div class="stat-content">
 							<h4>Sigap Lapor</h4>
-							<p class="mb-0">Vestibulum ante ipsum</p>
 						</div>
 					</div>
 				</div>
@@ -143,7 +142,6 @@
 						</div>
 						<div class="stat-content">
 							<h4>PPID Bawaslu</h4>
-							<p class="mb-0">Nullam quis ante</p>
 						</div>
 					</div>
 				</div>
@@ -154,7 +152,6 @@
 						</div>
 						<div class="stat-content">
 							<h4>SIPS</h4>
-							<p class="mb-0">Etiam sit amet orci</p>
 						</div>
 					</div>
 				</div>
@@ -165,7 +162,6 @@
 						</div>
 						<div class="stat-content">
 							<h4>Pendaftaran Pemantau Pemilu</h4>
-							<p class="mb-0">Vestibulum ante ipsum</p>
 						</div>
 					</div>
 				</div>
