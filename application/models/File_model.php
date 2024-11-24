@@ -1,7 +1,34 @@
 <?php
 
+/**
+ * @property $db
+ */
+
 class File_model extends CI_Model
 {
+
+	public function getAllFile()
+	{
+		return $this->db->get('file')->result_array();
+	}
+
+	public function getFileById($id)
+	{
+		return $this->db->get_where('file', ['id_file' => $id])->row_array();
+	}
+
+	public function insert($data)
+	{
+		return $this->db->insert('file', $data);
+	}
+
+	public function update_status($id_file, $data)
+	{
+		$this->db->where('id_file', $id_file);
+		return $this->db->update('file', $data);
+	}
+
+
 	function make_query()
 	{
 		$this->db->select('file.*')

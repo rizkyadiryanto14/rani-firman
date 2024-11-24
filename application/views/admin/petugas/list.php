@@ -39,10 +39,9 @@
 									<thead>
 									<tr>
 										<th>No</th>
-										<th>Nama</th>
 										<th>Username</th>
-										<th>Alamat</th>
-										<th>Jenis Kelamin</th>
+										<th>Email</th>
+										<th>Role</th>
 										<th>Action</th>
 									</tr>
 									</thead>
@@ -57,6 +56,47 @@
 	<!-- /.content -->
 </div>
 
+<!--<div class="modal fade" id="tambahpetugas">-->
+<!--	<div class="modal-dialog">-->
+<!--		<div class="modal-content">-->
+<!--			<div class="modal-header">-->
+<!--				<div class="modal-title">-->
+<!--					Form Tambah Petugas-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<form action="--><?php //= base_url('admin/petugas') ?><!--" method="post">-->
+<!--				<div class="modal-body">-->
+<!--					<div class="form-group">-->
+<!--						<label for="nama_lengkap">Nama Lengkap</label>-->
+<!--						<input type="hidden" name="id_users" id="id_users" value="--><?php //= $this->session->userdata('id_users') ?><!--">-->
+<!--						<input type="text" name="nama_lengkap" id="nama_lengkap" class="form-control">-->
+<!--					</div>-->
+<!--					<div class="form-group">-->
+<!--						<label for="alamat">Alamat</label>-->
+<!--						<input type="text" name="alamat" id="alamat" class="form-control">-->
+<!--					</div>-->
+<!--					<div class="form-group">-->
+<!--						<label for="jenis_kelamin">Jenis Kelamin</label>-->
+<!--						<select name="jenis_kelamin" id="jenis_kelamin" class="form-control">-->
+<!--							<option selected disabled>Pilih Jenis Kelamin</option>-->
+<!--							<option value="Laki-Laki">Laki-Laki</option>-->
+<!--							<option value="Perempuan">Perempuan</option>-->
+<!--						</select>-->
+<!--					</div>-->
+<!--					<div class="form-group">-->
+<!--						<label for="tanggal_lahir">Tanggal Lahir</label>-->
+<!--						<input type="date" name="tanggal_lahir" id="tanggal_lahir" class="form-control">-->
+<!--					</div>-->
+<!--			</form>-->
+<!--			</div>-->
+<!--			<div class="modal-footer">-->
+<!--				<button class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--				<button class="btn btn-primary" type="submit">Simpan</button>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
+
 <div class="modal fade" id="tambahpetugas">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -65,33 +105,26 @@
 					Form Tambah Petugas
 				</div>
 			</div>
-			<div class="modal-body">
-				<div class="form-group">
-					<label for="nama_lengkap">Nama Lengkap</label>
-					<input type="hidden" name="id_users" id="id_users" value="<?= $this->session->userdata('id_users') ?>">
-					<input type="text" name="nama_lengkap" id="nama_lengkap" class="form-control">
+			<form action="<?= base_url('admin/register_petugas') ?>" method="post">
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="username">Username</label>
+						<input type="text" name="username" id="username" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="text" name="email" id="email" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password" class="form-control">
+					</div>
 				</div>
-				<div class="form-group">
-					<label for="alamat">Alamat</label>
-					<input type="text" name="alamat" id="alamat" class="form-control">
+				<div class="modal-footer">
+					<button class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button class="btn btn-primary" type="submit">Simpan</button>
 				</div>
-				<div class="form-group">
-					<label for="jenis_kelamin">Jenis Kelamin</label>
-					<select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
-						<option selected disabled>Pilih Jenis Kelamin</option>
-						<option value="Laki-Laki">Laki-Laki</option>
-						<option value="Perempuan">Perempuan</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="tanggal_lahir">Tanggal Lahir</label>
-					<input type="date" name="tanggal_lahir" id="tanggal_lahir" class="form-control">
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button class="btn btn-primary" type="submit">Simpan</button>
-			</div>
+			</form>
 		</div>
 	</div>
 </div>
