@@ -7,33 +7,22 @@
 	<title>Bawaslu Sumbawa</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-
 	<!-- Favicons -->
 	<link href="<?= base_url() ?>assets/landing/img/favicon.png" rel="icon">
 	<link href="<?= base_url() ?>assets/landing/img/apple-touch-icon.png" rel="apple-touch-icon">
-
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com" rel="preconnect">
 	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
 	<!-- Vendor CSS Files -->
 	<link href="<?= base_url() ?>assets/landing/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?= base_url() ?>assets/landing/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 	<link href="<?= base_url() ?>assets/landing/vendor/aos/aos.css" rel="stylesheet">
 	<link href="<?= base_url() ?>assets/landing/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 	<link href="<?= base_url() ?>assets/landing/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
 	<!-- Main CSS File -->
 	<link href="<?= base_url() ?>assets/landing/css/main.css" rel="stylesheet">
 
-	<!-- =======================================================
-	* Template Name: iLanding
-	* Template URL: https://bootstrapmade.com/ibootstrlanding-ap-page-telanding-mplate/
-	* Updated: Nov 12 2024 with Bootstrap v5.3.3
-	* Author: BootstrapMade.com
-	* License: https://bootstrapmade.com/license/
-	======================================================== -->
 </head>
 
 <body class="index-page">
@@ -41,15 +30,13 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
 	<div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-		<a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-			<!-- Uncomment the line below if you also wish to use an image logo -->
-			 <img src="<?= base_url() ?>assets/images/logo.png" alt="">
-<!--			<h1 class="sitename">Bawaslu Sumbawa</h1>-->
+		<a href="<?= base_url('dashboard') ?>" class="logo d-flex align-items-center me-auto me-xl-0">
+			<img src="<?= base_url() ?>assets/images/logo.png" alt="">
 		</a>
 
 		<nav id="navmenu" class="navmenu">
 			<ul>
-				<li><a href="#hero" class="active">Beranda</a></li>
+				<li><a href="<?= base_url('Home') ?>" class="active">Beranda</a></li>
 				<li class="dropdown"><a href="#"><span>Profile Bawaslu</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 					<ul>
 						<li><a href="#">Struktur Bawaslu</a></li>
@@ -57,8 +44,7 @@
 						<li><a href="#">Dasar Hukum</a></li>
 					</ul>
 				</li>
-				<li><a href="<?= base_url('informasi_public') ?>">Informasi Publik</a></li>
-
+				<li><a href="#about">Informasi Publik</a></li>
 				<li><a href="#contact">Kontak</a></li>
 			</ul>
 			<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -71,156 +57,67 @@
 
 <main class="main">
 
-	<!-- Hero Section -->
 	<section id="hero" class="hero section">
-
-		<div class="container" data-aos="fade-up" data-aos-delay="100">
-
-			<div class="row align-items-center">
-				<div class="col-lg-6">
-					<div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-						<div class="company-badge mb-4">
-							<i class="bi bi-gear-fill me-2"></i>
-							Transparan dan Akuntable
-						</div>
-
-						<h1 class="mb-4">
-							Bawaslu <br>
-							Kabupaten Sumbawa <br>
-							<span class="accent-text">#AYOAWASIBERSAMA</span>
-						</h1>
-
-						<p class="mb-4 mb-md-5">
-							Badan Pengawas Pemilihan Umum Kabupaten Sumbawa
-							Jl. Dr. Cipto Kelurahan Seketeng Kabupaten Sumbawa (Ex. Pengadilan)
-						</p>
-
-						<div class="hero-buttons">
-							<a href="<?= base_url('datacenter') ?>" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
-							<a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-link mt-2 mt-sm-0 glightbox">
-								<i class="bi bi-play-circle me-1"></i>
-								Visi Misi
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-6">
-					<div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
-						<img src="<?= base_url() ?>assets/landing/img/illustration-1.webp" alt="Hero Image" class="img-fluid">
-
-						<div class="customers-badge">
-							<div class="customer-avatars">
-								<img src="<?= base_url() ?>assets/landing/img/avatar-1.webp" alt="Customer 1" class="avatar">
-								<img src="<?= base_url() ?>assets/landing/img/avatar-2.webp" alt="Customer 2" class="avatar">
-								<img src="<?= base_url() ?>assets/landing/img/avatar-3.webp" alt="Customer 3" class="avatar">
-								<img src="<?= base_url() ?>assets/landing/img/avatar-4.webp" alt="Customer 4" class="avatar">
-								<img src="<?= base_url() ?>assets/landing/img/avatar-5.webp" alt="Customer 5" class="avatar">
-								<span class="avatar more">12+</span>
-							</div>
-							<p class="mb-0 mt-2">Rakyat Sumbawa Dapat Mengkases Informasi Publik Pada Halaman Informasi Publik</p>
-						</div>
-					</div>
+		<div class="container">
+			<div class="row">
+				<!-- Section Title -->
+				<div class="col-12">
+					<h2 class="text-center">Informasi Publik</h2>
+					<p class="text-center">Klik folder di bawah untuk melihat dokumen berdasarkan kategori</p>
 				</div>
 			</div>
+			<!-- Folder Kategori -->
+			<div class="row">
+				<?php foreach (array_unique(array_column($file, 'kategori')) as $kategori): ?>
+					<div class="col-12">
+						<div class="folder" style="cursor: pointer; display: flex; align-items: center;"
+							 onclick="toggleCategory('<?= $kategori ?>')">
+							<i class="bi bi-folder-fill" style="font-size: 24px; color: #007bff; margin-right: 10px;"></i>
+							<span style="font-size: 18px;"><?= $kategori ?></span>
+						</div>
 
-			<div class="row stats-row gy-4 mt-5" data-aos="fade-up" data-aos-delay="500">
-				<div class="col-lg-3 col-md-6">
-					<div class="stat-item">
-						<div class="stat-icon">
-							<i class="bi bi-trophy"></i>
-						</div>
-						<div class="stat-content">
-							<h4>Sigap Lapor</h4>
-							<p class="mb-0">Vestibulum ante ipsum</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="stat-item">
-						<div class="stat-icon">
-							<i class="bi bi-briefcase"></i>
-						</div>
-						<div class="stat-content">
-							<h4>PPID Bawaslu</h4>
-							<p class="mb-0">Nullam quis ante</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="stat-item">
-						<div class="stat-icon">
-							<i class="bi bi-graph-up"></i>
-						</div>
-						<div class="stat-content">
-							<h4>SIPS</h4>
-							<p class="mb-0">Etiam sit amet orci</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="stat-item">
-						<div class="stat-icon">
-							<i class="bi bi-award"></i>
-						</div>
-						<div class="stat-content">
-							<h4>Pendaftaran Pemantau Pemilu</h4>
-							<p class="mb-0">Vestibulum ante ipsum</p>
+						<!-- Tabel Dokumen -->
+						<div id="category-<?= $kategori ?>" class="file-table mt-3" style="display: none; margin-left: 30px;">
+							<table class="table table-striped table-bordered">
+								<thead>
+								<tr>
+									<th>No</th>
+									<th>Nama File</th>
+									<th>Keterangan</th>
+									<th>Tanggal Dibuat</th>
+									<th>Action</th>
+								</tr>
+								</thead>
+								<tbody>
+								<?php
+								$no = 1;
+								foreach ($file as $row):
+									if ($row['kategori'] === $kategori): ?>
+										<tr>
+											<td><?= $no++ ?></td>
+											<td><?= $row['nama_file'] ?></td>
+											<td><?= $row['keterangan'] ?></td>
+											<td><?= $row['created_at'] ?></td>
+											<td>
+												<?php if ($row['status'] == 1): ?>
+													<!-- File dengan status 1 dapat diunduh -->
+													<a href="<?= base_url('uploads/') . $row['file'] ?>" class="btn btn-sm btn-primary" target="_blank">Download</a>
+												<?php else: ?>
+													<!-- File dengan status 0 mengarahkan ke login -->
+													<a href="<?= base_url('datacenter') ?>" class="btn btn-sm btn-warning">Login to Download</a>
+												<?php endif; ?>
+											</td>
+										</tr>
+									<?php endif;
+								endforeach; ?>
+								</tbody>
+							</table>
 						</div>
 					</div>
-				</div>
+				<?php endforeach; ?>
 			</div>
-
 		</div>
-
-	</section><!-- /Hero Section -->
-
-	<!-- About Section -->
-	<section id="about" class="about section">
-
-		<div class="container" data-aos="fade-up" data-aos-delay="100">
-
-			<div class="row gy-4 align-items-center justify-content-between">
-
-				<div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
-					<span class="about-meta">Mengenal Bawaslu Sumbawa Lebih Dekat</span>
-					<h2 class="about-title">Berkomitmen dalam Menjaga Integritas dan Transparansi Pemilu di Kabupaten Sumbawa</h2>
-					<p class="about-description">Bawaslu Sumbawa adalah lembaga independen yang bertugas memastikan pelaksanaan pemilu yang adil, jujur, dan demokratis di Kabupaten Sumbawa. Kami berkomitmen untuk mencegah dan menangani pelanggaran pemilu serta meningkatkan kesadaran masyarakat tentang pentingnya integritas dalam pemilu</p>
-
-					<div class="row feature-list-wrapper">
-						<div class="col-md-6">
-							<ul class="feature-list">
-								<li><i class="bi bi-check-circle-fill"></i> Membangun aparatur dan kelembagaan Pengawas Pemilu yang kuat, mandiri dan solid;</li>
-								<li><i class="bi bi-check-circle-fill"></i> Mengembangkan pola dan metode pengawasan yang efektif dan efisien;</li>
-								<li><i class="bi bi-check-circle-fill"></i> Memperkuat sistem kontrol nasional dalam satu manajemen pengawasan yang terstruktur, sistematis, dan integratif berbasis teknologi;</li>
-							</ul>
-						</div>
-						<div class="col-md-6">
-							<ul class="feature-list">
-								<li><i class="bi bi-check-circle-fill"></i> Meningkatkan keterlibatan masyarakat dan peserta Pemilu, serta meningkatkan sinergi kelembagaan dalam pengawasan Pemilu partisipatif;</li>
-								<li><i class="bi bi-check-circle-fill"></i> Meningkatkan kepercayaan publik atas kualitas kinerja pengawasan berupa pencegahan dan penindakan, serta penyelesaian sengketa secara cepat, akurat dan transparan;</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
-					<div class="image-wrapper">
-						<div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
-							<img src="<?= base_url() ?>assets/landing/img/gambar1.jpg" alt="Business Meeting" class="img-fluid main-image rounded-4">
-						</div>
-						<div class="experience-badge floating">
-							<h3>Periode</h3>
-							<p>Tahun 2023 - 2028</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-	</section><!-- /About Section -->
-
+	</section>
 
 	<!-- Contact Section -->
 	<section id="contact" class="contact section light-background">
@@ -314,7 +211,7 @@
 
 		</div>
 
-	</section><!-- /Contact Section -->
+	</section>
 
 </main>
 
@@ -356,6 +253,25 @@
 		});
 	</script>
 <?php endif; ?>
+
+<script>
+	function toggleCategory(categoryId) {
+		// Cari elemen tabel berdasarkan ID kategori
+		const categoryElement = document.getElementById(`category-${categoryId}`);
+
+		// Cek apakah elemen ada (hindari error jika ID tidak ditemukan)
+		if (categoryElement) {
+			// Toggle visibilitas tabel
+			if (categoryElement.style.display === 'none' || categoryElement.style.display === '') {
+				categoryElement.style.display = 'block';
+			} else {
+				categoryElement.style.display = 'none';
+			}
+		} else {
+			console.error(`Element with ID 'category-${categoryId}' not found!`);
+		}
+	}
+</script>
 
 </body>
 

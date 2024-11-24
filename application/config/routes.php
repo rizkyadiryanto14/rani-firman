@@ -62,12 +62,27 @@ $route['auth/logout']	= 'Auth/logout';
 //dashboard
 $route['dashboard']	= 'Dashboard';
 
+$route['informasi_public']	= 'Home/informasi_public';
+
 
 //admin
 $route['admin/file']		='Admin/File';
 $route['admin/get_data_file']		= 'Admin/File/get_data_file';
 $route['admin/insert_file']			= 'Admin/File/insert';
+$route['admin/edit/(:num)']			= 'Admin/File/update/$1';
+$route['admin/public/(:num)']		= 'Admin/File/public/$1';
+$route['admin/private/(:num)']		= 'Admin/File/private/$1';
 
-$route['admin/petugas']		= 'Admin/Petugas';
+
+$route['admin/petugas']				= 'Admin/Petugas';
 $route['admin/get_data_petugas']	= 'Admin/Petugas/get_data_petugas';
 $route['admin/insert_petugas']		= 'Admin/Petugas/insert';
+$route['admin/edit_petugas/(:num)'] = 'Admin/Petugas/update/$1';
+$route['admin/register_petugas']	= 'Admin/Petugas/register';
+
+
+//petugas
+$route['petugas/profile']		= 'Users/Petugas';
+$route['petugas/update_profile']= 'Users/Petugas/profile';
+$route['petugas/file']			= 'Users/Petugas/file';
+$route['petugas/get_data_file']	= 'Users/Petugas/get_data_file';

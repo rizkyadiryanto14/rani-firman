@@ -39,7 +39,7 @@
 					</a>
 					<ul class="nav nav-treeview">
 						<li class="nav-item">
-							<a href="<?= base_url('admin/file') ?>" class="nav-link active">
+							<a href="<?= base_url('admin/file') ?>" class="nav-link">
 								<i class="far fa-file nav-icon"></i>
 								<p>Data Files</p>
 							</a>
@@ -63,13 +63,13 @@
 						</a>
 						<ul class="nav nav-treeview">
 							<li class="nav-item">
-								<a href="<?= base_url('admin/file') ?>" class="nav-link active">
+								<a href="<?= base_url('petugas/file') ?>" class="nav-link">
 									<i class="far fa-file nav-icon"></i>
 									<p>Data Files</p>
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="<?= base_url('admin/petugas') ?>" class="nav-link">
+								<a href="<?= base_url('petugas/profile') ?>" class="nav-link">
 									<i class="far fa-user nav-icon"></i>
 									<p>Profile</p>
 								</a>

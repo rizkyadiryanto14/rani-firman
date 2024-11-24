@@ -10,7 +10,6 @@
 						<p class="lead">Masuk untuk mendapat akses ke sistem.</p>
 					</div>
 				</div>
-
 				<div class="row">
 					<div class="col-12 col-md-5 mx-auto mt-6">
 						<form action="<?= base_url('auth/login') ?>" method="post">

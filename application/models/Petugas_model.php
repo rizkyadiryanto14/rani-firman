@@ -12,6 +12,22 @@ class Petugas_model extends CI_Model
 		return $this->db->insert('petugas', $data);
 	}
 
+	public function getPetugasById($id_petugas)
+	{
+		return $this->db->get_where('petugas', ['id_petugas' => $id_petugas])->row_array();
+	}
+
+	public function getPetugasByIdUser($id_user)
+	{
+		return $this->db->get_where('petugas', ['id_user' => $id_user])->row_array();
+	}
+
+	public function update($id_users, $data)
+	{
+		$this->db->where('id_users', $id_users);
+		return $this->db->update('petugas', $data);
+	}
+
 	function make_query()
 	{
 		$this->db->select('petugas.*')
