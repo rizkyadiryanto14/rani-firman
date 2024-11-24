@@ -63,6 +63,9 @@ $route['auth/logout']	= 'Auth/logout';
 $route['dashboard']	= 'Dashboard';
 
 $route['informasi_public']	= 'Home/informasi_public';
+$route['visi_misi']			= 'Home/visi_misi';
+$route['struktur_bawaslu']	= 'Home/struktur_bawaslu';
+$route['dasar_hukum']		= 'Home/dasar_hukum';
 
 
 //admin

@@ -7,22 +7,33 @@
 	<title>Bawaslu Sumbawa</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
+
 	<!-- Favicons -->
 	<link href="<?= base_url() ?>assets/landing/img/favicon.png" rel="icon">
 	<link href="<?= base_url() ?>assets/landing/img/apple-touch-icon.png" rel="apple-touch-icon">
+
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com" rel="preconnect">
 	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 	<!-- Vendor CSS Files -->
 	<link href="<?= base_url() ?>assets/landing/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?= base_url() ?>assets/landing/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 	<link href="<?= base_url() ?>assets/landing/vendor/aos/aos.css" rel="stylesheet">
 	<link href="<?= base_url() ?>assets/landing/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 	<link href="<?= base_url() ?>assets/landing/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
 	<!-- Main CSS File -->
 	<link href="<?= base_url() ?>assets/landing/css/main.css" rel="stylesheet">
 
+	<!-- =======================================================
+	* Template Name: iLanding
+	* Template URL: https://bootstrapmade.com/ibootstrlanding-ap-page-telanding-mplate/
+	* Updated: Nov 12 2024 with Bootstrap v5.3.3
+	* Author: BootstrapMade.com
+	* License: https://bootstrapmade.com/license/
+	======================================================== -->
 </head>
 
 <body class="index-page">
@@ -30,8 +41,10 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
 	<div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-		<a href="<?= base_url('dashboard') ?>" class="logo d-flex align-items-center me-auto me-xl-0">
+		<a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+			<!-- Uncomment the line below if you also wish to use an image logo -->
 			<img src="<?= base_url() ?>assets/images/logo.png" alt="">
+			<!--			<h1 class="sitename">Bawaslu Sumbawa</h1>-->
 		</a>
 
 		<nav id="navmenu" class="navmenu">
@@ -58,66 +71,84 @@
 
 <main class="main">
 
-	<section id="hero" class="hero section">
-		<div class="container">
-			<div class="row">
-				<!-- Section Title -->
-				<div class="col-12">
-					<h2 class="text-center">Informasi Publik</h2>
-					<p class="text-center">Klik folder di bawah untuk melihat dokumen berdasarkan kategori</p>
+	<!-- Hero Section -->
+	<section id="hero" class="hero section bg-light py-5">
+
+		<div class="container" data-aos="fade-up" data-aos-delay="100" style="padding-top: 5%">
+			<div class="row justify-content-center mb-4">
+				<div class="col-md-8 text-center">
+					<h1 class="fw-bold">Struktur Bawaslu Kabupaten Sumbawa</h1>
+					<p class="text-muted fs-5">Periode 2023-2028</p>
 				</div>
 			</div>
-			<!-- Folder Kategori -->
-			<div class="row">
-				<?php foreach (array_unique(array_column($file, 'kategori')) as $kategori): ?>
-					<div class="col-12">
-						<div class="folder" style="cursor: pointer; display: flex; align-items: center;"
-							 onclick="toggleCategory('<?= $kategori ?>')">
-							<i class="bi bi-folder-fill" style="font-size: 24px; color: #007bff; margin-right: 10px;"></i>
-							<span style="font-size: 18px;"><?= $kategori ?></span>
-						</div>
-
-						<!-- Tabel Dokumen -->
-						<div id="category-<?= $kategori ?>" class="file-table mt-3" style="display: none; margin-left: 30px;">
-							<table class="table table-striped table-bordered">
-								<thead>
-								<tr>
-									<th>No</th>
-									<th>Nama File</th>
-									<th>Keterangan</th>
-									<th>Tanggal Dibuat</th>
-									<th>Action</th>
-								</tr>
-								</thead>
-								<tbody>
-								<?php
-								$no = 1;
-								foreach ($file as $row):
-									if ($row['kategori'] === $kategori): ?>
-										<tr>
-											<td><?= $no++ ?></td>
-											<td><?= $row['nama_file'] ?></td>
-											<td><?= $row['keterangan'] ?></td>
-											<td><?= $row['created_at'] ?></td>
-											<td>
-												<?php if ($row['status'] == 1): ?>
-													<!-- File dengan status 1 dapat diunduh -->
-													<a href="<?= base_url('uploads/') . $row['file'] ?>" class="btn btn-sm btn-primary" target="_blank">Download</a>
-												<?php else: ?>
-													<!-- File dengan status 0 mengarahkan ke login -->
-													<a href="<?= base_url('datacenter') ?>" class="btn btn-sm btn-warning">Login to Download</a>
-												<?php endif; ?>
-											</td>
-										</tr>
-									<?php endif;
-								endforeach; ?>
-								</tbody>
-							</table>
+			<div class="row g-4">
+				<!-- Ketua -->
+				<div class="col-lg-4 col-md-6">
+					<div class="card text-center shadow-sm border-0">
+						<div class="card-body">
+							<div class="mb-3">
+								<i class="bi bi-person-fill text-primary" style="font-size: 2.5rem;"></i>
+							</div>
+							<h5 class="card-title fw-bold">Arnan Jurami, S.IP</h5>
+							<p class="text-muted">Ketua</p>
 						</div>
 					</div>
-				<?php endforeach; ?>
+				</div>
+
+				<!-- Anggota 1 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="card text-center shadow-sm border-0">
+						<div class="card-body">
+							<div class="mb-3">
+								<i class="bi bi-person-fill text-success" style="font-size: 2.5rem;"></i>
+							</div>
+							<h5 class="card-title fw-bold">Jusriadi, S.H.</h5>
+							<p class="text-muted">Anggota</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Anggota 2 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="card text-center shadow-sm border-0">
+						<div class="card-body">
+							<div class="mb-3">
+								<i class="bi bi-person-fill text-warning" style="font-size: 2.5rem;"></i>
+							</div>
+							<h5 class="card-title fw-bold">Ubaidullah</h5>
+							<p class="text-muted">Anggota</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Anggota 3 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="card text-center shadow-sm border-0">
+						<div class="card-body">
+							<div class="mb-3">
+								<i class="bi bi-person-fill text-danger" style="font-size: 2.5rem;"></i>
+							</div>
+							<h5 class="card-title fw-bold">Abdul Malik, S.E.</h5>
+							<p class="text-muted">Anggota</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Anggota 4 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="card text-center shadow-sm border-0">
+						<div class="card-body">
+							<div class="mb-3">
+								<i class="bi bi-person-fill text-info" style="font-size: 2.5rem;"></i>
+							</div>
+							<h5 class="card-title fw-bold">Sanapiah</h5>
+							<p class="text-muted">Anggota</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+
 	</section>
 
 	<!-- Contact Section -->
@@ -212,7 +243,7 @@
 
 		</div>
 
-	</section>
+	</section><!-- /Contact Section -->
 
 </main>
 
@@ -254,25 +285,6 @@
 		});
 	</script>
 <?php endif; ?>
-
-<script>
-	function toggleCategory(categoryId) {
-		// Cari elemen tabel berdasarkan ID kategori
-		const categoryElement = document.getElementById(`category-${categoryId}`);
-
-		// Cek apakah elemen ada (hindari error jika ID tidak ditemukan)
-		if (categoryElement) {
-			// Toggle visibilitas tabel
-			if (categoryElement.style.display === 'none' || categoryElement.style.display === '') {
-				categoryElement.style.display = 'block';
-			} else {
-				categoryElement.style.display = 'none';
-			}
-		} else {
-			console.error(`Element with ID 'category-${categoryId}' not found!`);
-		}
-	}
-</script>
 
 </body>
 
