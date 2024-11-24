@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<!-- Favicons -->
-	<link href="<?= base_url() ?>assets/landing/img/favicon.png" rel="icon">
+	<link href="<?= base_url() ?>assets/images/logo.png" rel="icon">
 	<link href="<?= base_url() ?>assets/landing/img/apple-touch-icon.png" rel="apple-touch-icon">
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com" rel="preconnect">
@@ -30,7 +30,7 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
 	<div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-		<a href="<?= base_url('dashboard') ?>" class="logo d-flex align-items-center me-auto me-xl-0">
+		<a href="<?= base_url('Home') ?>" class="logo d-flex align-items-center me-auto me-xl-0">
 			<img src="<?= base_url() ?>assets/images/logo.png" alt="">
 		</a>
 
@@ -102,7 +102,7 @@
 											<td>
 												<?php if ($row['status'] == 1): ?>
 													<!-- File dengan status 1 dapat diunduh -->
-													<a href="<?= base_url('uploads/') . $row['file'] ?>" class="btn btn-sm btn-primary" target="_blank">Download</a>
+													<a href="<?= base_url($row['file']) ?>" class="btn btn-sm btn-primary" target="_blank">Download</a>
 												<?php else: ?>
 													<!-- File dengan status 0 mengarahkan ke login -->
 													<a href="<?= base_url('datacenter') ?>" class="btn btn-sm btn-warning">Login to Download</a>
