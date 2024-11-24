@@ -49,12 +49,12 @@
 
 		<nav id="navmenu" class="navmenu">
 			<ul>
-				<li><a href="#hero" class="active">Beranda</a></li>
+				<li><a href="<?= base_url('Home') ?>" class="active">Beranda</a></li>
 				<li class="dropdown"><a href="#"><span>Profile Bawaslu</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 					<ul>
-						<li><a href="#">Struktur Bawaslu</a></li>
-						<li><a href="#">Visi Misi</a></li>
-						<li><a href="#">Dasar Hukum</a></li>
+						<li><a href="<?= base_url('struktur_bawaslu') ?>">Struktur Bawaslu</a></li>
+						<li><a href="<?= base_url('visi_misi') ?>">Visi Misi</a></li>
+						<li><a href="<?= base_url('dasar_hukum') ?>">Dasar Hukum</a></li>
 					</ul>
 				</li>
 				<li><a href="<?= base_url('informasi_public') ?>">Informasi Publik</a></li>
